@@ -14,11 +14,13 @@ private:
     Button *ledButton;
     Button *clientButton;
     Controller *controller;
+    tcpClient *client;
 
 public:
-    Listener(Button *ledButton, Button *clientButton, Controller *controller);
+    Listener(Button *ledButton, Button *clientButton, Controller *controller, tcpClient *client);
     ~Listener();
     void checkEvent();
+    void checkClient();
 };
 
 #endif

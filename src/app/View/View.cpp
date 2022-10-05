@@ -25,8 +25,12 @@ void View::setLedState(int state)
 void View::ledView()
 {
     if(activeState == INACITVE)
-        led->Off();
-        
+    {
+        if(ledState == LED_OFF)
+            led->Off();
+        else if(ledState == LED_ON)
+            led->On();
+    }   
     else if(activeState == ACTIVE)
     {
         if(ledState == LED_OFF)

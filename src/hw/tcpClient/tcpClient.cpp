@@ -1,9 +1,7 @@
 #include "tcpClient.h"
 
 tcpClient::tcpClient()
-{
-    createSocket();
-}
+{}
 
 tcpClient::~tcpClient()
 {
@@ -61,7 +59,12 @@ void tcpClient::receiveDatafromServer()
         perror("recv()");
         return;
     }
-    printf("Received data : %s ", mesg); /* 받은 문자열을 화면에 출력 */
+    printf("Received data : %s", mesg); /* 받은 문자열을 화면에 출력 */
+}
+
+char* tcpClient::returnData()
+{
+    return mesg;
 }
 
 void tcpClient::closeSocket(int socket)

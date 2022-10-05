@@ -18,7 +18,7 @@ public:
     Controller(View *view);
     ~Controller();
     void updateEvent(std::string strbtn);
-
+    void updateEvent(char* str);
 
 };
 

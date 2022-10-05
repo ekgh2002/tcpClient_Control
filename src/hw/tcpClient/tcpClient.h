@@ -30,6 +30,7 @@ public:
     void sendDatatoServer();
     void receiveDatafromServer();
     void closeSocket(int socket);
+    char* returnData();
 };
 
 #endif
